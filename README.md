@@ -1,8 +1,8 @@
-# Mesh Neural Networks Based on Dual Graph Pyramids(TVCG)
+# Mesh Neural Networks Based on Dual Graph Pyramids
 
 The repository contains official jittor implementations for **LRPNet**. 
 
-The paper is in [Here](https://arxiv.org/pdf/2301.06962).
+The paper is in [Here](https://ieeexplore.ieee.org/abstract/document/10070611/).
 
 
 ## Installation
