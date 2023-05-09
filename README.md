@@ -1,6 +1,6 @@
 # Mesh Neural Networks Based on Dual Graph Pyramids
 
-The repository contains official jittor implementations for **LRPNet**. 
+The repository contains official jittor implementations for **DGNet**. 
 
 The paper is in [Here](https://ieeexplore.ieee.org/abstract/document/10070611/).
 
