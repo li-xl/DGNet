@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+work_dirs 
+work_dir
+temp 
+tmp 
+*.obj
+*.ply
+*.so
+*.npy
+maps
+work_dir*
+*.csv
+datasets
+tmp
+results

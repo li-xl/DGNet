@@ -1,0 +1,4 @@
+jittor
+pyyaml
+trimesh
+plyfile

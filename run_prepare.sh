@@ -1,0 +1,1 @@
+PYTHONPATH=./:$PATHONPATH python3 tools/process_scannet.py

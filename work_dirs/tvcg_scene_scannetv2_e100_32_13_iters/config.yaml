@@ -1,0 +1,109 @@
+batch_size: 8
+checkpoint_interval: 5
+dataroot: datasets/scannet/scannet_voxel_2_split100000
+dataset:
+  train:
+    batch_size: 8
+    color_aug: false
+    dataroot: datasets/scannet/scannet_voxel_2_split100000
+    feats:
+    - area
+    - normal
+    - center
+    - color
+    - angle
+    - curvs
+    file_ext: .obj
+    mode: train
+    num_workers: 4
+    pattern: scene*.obj
+    shuffle: true
+    transforms:
+    - type: Distort
+    - type: Rotation3
+    - type: Normalize3
+    type: Scannet
+  val:
+    batch_size: 2
+    color_aug: false
+    dataroot: datasets/scannet/scannet_voxel_2_split100000
+    feats:
+    - area
+    - normal
+    - center
+    - color
+    - angle
+    - curvs
+    file_ext: .obj
+    mode: val
+    num_workers: 4
+    pattern: scene*.obj
+    shuffle: false
+    transforms:
+    - type: Rotation3
+    - type: Normalize3
+    type: Scannet
+eval_interval: 5
+feats:
+- area
+- normal
+- center
+- color
+- angle
+- curvs
+ignore_index: 0
+iou_metric: true
+log_interval: 1
+logger:
+  type: RunLogger
+lr_scheduler:
+  max_steps: 200
+  type: PolyLR
+max_epoch: 200
+model:
+  decoder_channels:
+  - 224
+  - 192
+  - 160
+  - 128
+  - 96
+  - 64
+  dilations:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  dropouts:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  encoder_channels:
+  - 64
+  - 96
+  - 128
+  - 160
+  - 192
+  - 224
+  in_channels: 16
+  max_sample: 30
+  num_classes: 21
+  radius:
+  - 0.1
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  temp_sample: 1000
+  type: MeshSeg2
+  use_pool: true
+name: tvcg_scene_scannetv2_e100_32_13_iters
+optimizer:
+  lr: 0.001
+  type: Adam
+  weight_decay: 0.0001
+processor: segmentation
+val_iters: 1
+work_dir: work_dirs/tvcg_scene_scannetv2_e100_32_13_iters
